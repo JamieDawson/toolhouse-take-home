@@ -1,0 +1,24 @@
+# Ignore environment variables file
+.env
+
+# Ignore specific JavaScript test file
+test.js
+
+# Ignore Python cache files and directories
+__pycache__/
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+.venv/
+
+# Ignore IDE-specific files (optional)
+.vscode/
+.idea/
+
+# Ignore log files
+*.log
+
+# Ignore OS generated files (optional)
+.DS_Store
+Thumbs.db
