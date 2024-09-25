@@ -2,6 +2,8 @@
 
 This repo contains the frontend and backend code for my Toolhouse code generator project. In this project, you can send a "Generate FizzBuzz code. Execute it to show me the results up to 10" or "Give me a description of how FizzBuzz works and then show me some code"
 
+[Click this link to watch the video tutorial on how it's built!](https://youtu.be/B4iS1V-eEHs)
+
 ## Steps to run the app
 
 1. run `git clone https://github.com/JamieDawson/toolhouse-take-home.git` to clone the repo.
