@@ -6,6 +6,7 @@ function App() {
   const [responseText, setResponseText] = useState(""); //Stores data from response
   const [loading, setLoading] = useState(false); //Stores loading state depending if we are waiting for a response.
 
+  //The function that is tricked when we submit the form
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -19,10 +20,10 @@ function App() {
 
       //Checks if the return value is either response or tool_call_code!
       if (res.data.response) {
-        console.log("Content got called");
+        console.log("Content found");
         setResponseText(res.data.response);
       } else if (res.data.tool_call_code) {
-        console.log("Tool call got called");
+        console.log("Tool_call found");
         const parsedToolCall = JSON.parse(res.data.tool_call_code);
         setResponseText(parsedToolCall.code_str);
       } else if (res.data.error) {
