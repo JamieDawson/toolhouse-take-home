@@ -11,6 +11,11 @@ This repo contains the frontend and backend code for my Toolhouse code generator
 20:37 - Frontend code  
 22:47 - Testing the completed app
 
+## Important docs:
+
+[Toolhouse quick start docs](https://docs.toolhouse.ai/toolhouse/quick-start)
+[Frontend code to copy-and-paste](https://github.com/JamieDawson/toolhouse-take-home/blob/main/Frontend/src/App.js)
+
 ## Steps to run the app
 
 1. run `git clone https://github.com/JamieDawson/toolhouse-take-home.git` to clone the repo.
