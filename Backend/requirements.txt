@@ -1,5 +1,0 @@
-Flask
-flask-cors
-python-dotenv
-together
-toolhouse
