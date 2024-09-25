@@ -3,6 +3,12 @@
 This repo contains the frontend and backend code for my Toolhouse code generator project. In this project, you can send a "Generate FizzBuzz code. Execute it to show me the results up to 10" or "Give me a description of how FizzBuzz works and then show me some code"
 
 [Click this link to watch the video tutorial on how it's built!](https://youtu.be/B4iS1V-eEHs)
+0:00 - Intro
+3:03 - Environment setup
+4:35 - Backend code
+18:20 - Testing with Postman
+20:37 - Frontend code
+22:47 - Testing the completed app
 
 ## Steps to run the app
 
