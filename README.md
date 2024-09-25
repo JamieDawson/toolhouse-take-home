@@ -19,6 +19,7 @@ Make sure to add the appropriate API keys.
 5. run `npm i axios` to install the axios package.
 6. Inside the backend folder, run `py .\app.py` to run the backend server
 7. Inside the frontend folder, run `npm run start` to run the frontend server
+8. Test the app by pasting `Give me a description of how FizzBuzz works and then show me some code` into the text area and clicking the submit button. If everything is set up correctly, you should see a response below.
 
 ## The app being used:
 
