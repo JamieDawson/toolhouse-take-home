@@ -1,0 +1,20 @@
+# Ignore .env files
+Backend/.env
+
+# Ignore node_modules directory in Frontend (React project)
+Frontend/node_modules/
+
+# Ignore build output from React project
+Frontend/build/
+
+# Ignore logs
+Frontend/npm-debug.log*
+Frontend/yarn-debug.log*
+Frontend/yarn-error.log*
+
+# Ignore lock files (optional, based on your project preferences)
+Frontend/package-lock.json
+Frontend/yarn.lock
+
+# Ignore .DS_Store files (macOS only)
+Frontend/.DS_Store

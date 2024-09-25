@@ -14,9 +14,15 @@ function App() {
       const res = await axios.post("http://localhost:5000/generate-code", {
         content: inputText,
       });
+      console.log(res);
 
       if (res.data.response) {
+        console.log("Content got called");
         setResponseText(res.data.response);
+      } else if (res.data.tool_call_code) {
+        console.log("Tool call got called");
+        const parsedToolCall = JSON.parse(res.data.tool_call_code);
+        setResponseText(parsedToolCall.code_str);
       } else if (res.data.error) {
         setResponseText(res.data.error);
       }
@@ -50,20 +56,18 @@ function App() {
         style={{
           whiteSpace: "pre-wrap",
           wordWrap: "break-word",
-          paddingLeft: "60px", // Padding on the left
-          maxWidth: "60%", // Set max width to prevent it from being too wide
+          paddingLeft: "60px",
+          maxWidth: "80%", // Limit the width to prevent overflow
+          overflow: "auto", // Add scroll if necessary
+          boxSizing: "border-box", // Include padding in width calculation
         }}
       >
-        {responseText}
+        <pre style={{ margin: 0 }}>
+          <code>{responseText}</code>
+        </pre>
       </div>
     </div>
   );
 }
 
 export default App;
-
-/*
-"Generate Two Sum code."
-        "Make the two arguements array called nums=[2,7,11,15] and target=9."
-        "After posting the code, give a basic explination on how the code works"
-*/
