@@ -2,20 +2,22 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [inputText, setInputText] = useState("");
-  const [responseText, setResponseText] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [inputText, setInputText] = useState(""); //Stores data from textarea
+  const [responseText, setResponseText] = useState(""); //Stores data from response
+  const [loading, setLoading] = useState(false); //Stores loading state depending if we are waiting for a response.
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
+      // Send the request to the backend.
       const res = await axios.post("http://localhost:5000/generate-code", {
         content: inputText,
       });
       console.log(res);
 
+      //Checks if the return value is either response or tool_call_code!
       if (res.data.response) {
         console.log("Content got called");
         setResponseText(res.data.response);
